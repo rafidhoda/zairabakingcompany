@@ -10,38 +10,35 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="form">
+    <div class="field">
+      <%= form.text_field :title, class: 'text-field', placeholder: 'Cookie' %>
+    </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <div class="field">
+      <%= form.text_area :description, class: 'text-area', rows: 5, placeholder: 'These cookies are so amazeballs' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :image_url, class: 'text-field', placeholder: 'https://i.imgur.com/iFmDBUZ.png' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :currency, class: 'text-field', placeholder: 'NOK' %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :cost, class: 'text-field', placeholder: '50' %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :items_per_order, class: 'text-field', placeholder: '5' %>
+    </div>
+
+    <div class="field">
+      <%= form.submit "Submit", class: 'fullwidth-button' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :currency %>
-    <%= form.text_field :currency %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cost %>
-    <%= form.number_field :cost %>
-  </div>
-
-  <div class="field">
-    <%= form.label :items_per_order %>
-    <%= form.number_field :items_per_order %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
