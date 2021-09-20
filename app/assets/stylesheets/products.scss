@@ -1,3 +1,74 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import './variables.scss';
+.product-display {
+	width: 300px; 
+	height: 100px;
+	background:blue;
+	color: yellow;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+	flex-flow: row wrap;
+}
+
+.product-block {
+  background-color: $white;
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+  color: $black;
+  margin: 20px 30px;
+
+	-webkit-box-shadow: 0px 6px 12px -4px rgba(0,0,0,0.32); 
+	box-shadow: 0px 6px 12px -4px rgba(0,0,0,0.32);
+
+}
+
+.product-block:hover {
+  transform: scale(1.1);
+}
+
+.product-block:link {
+  text-decoration: none;
+}
+
+.product-image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.page-body {
+	width: 1000px;
+	max-width: 99vw; 
+	margin: 0 auto;
+}
+
+.product-display {
+	width: 900px;
+	max-width: 98%; 
+	height: auto; 
+	text-align: center;
+	margin-top: 100px;
+}
+
+.product-display p {
+	
+}
+
+
+.product-review {
+	width: 290px;
+	box-sizing: border-box;
+	padding: 5px;
+	background: white; 
+	border-radius: 5px;
+	text-align: center;
+
+	-webkit-box-shadow: 0px 6px 12px -4px rgba(0,0,0,0.32); 
+	box-shadow: 0px 6px 12px -4px rgba(0,0,0,0.32);
+
+}

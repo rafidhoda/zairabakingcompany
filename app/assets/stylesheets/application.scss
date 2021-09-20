@@ -14,21 +14,40 @@
  *= require_self
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap');
+ @import './variables.scss';
 
-$base-blue: #CAE6FF;
-$dark-blue: #15ABFF;
-$light-blue: #52C1FF;
-$gray: #C4C4C4;
-$white: #FFF;
-$black: #000000;
+
+
+html {
+	width: 100vw;
+}
 
 body {
   background-color: $base-blue;
   font-family: 'Source Sans Pro';
   color: $black;
+	width: 100vw;
+	height: auto;
+	max-width: 100vw;
+	
+	height: auto; 
+	padding: 0;
+	margin: 0 auto;
+	text-align: center; 
+}
+main {
+	width: 100vw;
+	height: auto;
+	box-sizing: border-box;
+	position: relative;
+	left: 0;  
+	overflow: hidden;  
 }
 
+h1, h2, h3, h4, h5, h6, p, a {
+	font-family: 'Source Sans Pro';
+	text-decoration: none; 
+}
 h1,h2,h3,h4,h5 {
   text-align: center;
 }
@@ -52,105 +71,7 @@ h1 {
   background-color: $light-blue;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  font-size: 1.5em;
-  .logo {
-    margin: 0 40px;
-    font-weight: 900;
-  }
-  .link {
-    color: $dark-blue;
-    margin: 0 40px;
-  }
 
-  .link:link {
-    text-decoration: none;
-  }
 
-  .link:hover {
-    color: $light-blue;
-  }
-}
 
-.form {
-  margin: 0 auto;
-  max-width: 760px;
-}
 
-.text-field {
-  background-color: $white;
-  color: $black;
-  padding: 10px 30px;
-  border-radius: 10px;
-  font-size: 1.5em;
-  border-width: 0px;
-  width: 92%;
-  font-family: 'Source Sans Pro';
-}
-
-.text-area {
-  background-color: $white;
-  color: $black;
-  padding: 10px 30px;
-  border-radius: 10px;
-  font-size: 1.5em;
-  border-width: 0px;
-  width: 92%;
-  font-family: 'Source Sans Pro';
-}
-
-.field {
-  max-width: 700px;
-  margin: 20px auto;
-}
-
-.fullwidth-button {
-  background-color: $dark-blue;
-  color: $white;
-  padding: 10px 30px;
-  border-radius: 10px;
-  width: 700px;
-  font-size: 3em;
-  border-width: 0px;
-}
-
-.fullwidth-button:link {
-  text-decoration: none;
-}
-
-.fullwidth-button:hover {
-  background-color: $light-blue;
-  cursor: pointer;
-}
-
-.products {
-  display: flex;
-  justify-content: center;
-}
-
-.product-block {
-  background-color: $white;
-  border-radius: 10px;
-  transition: all 0.2s ease-out;
-  color: $black;
-  margin: 20px 30px;
-}
-
-.product-block:hover {
-  transform: scale(1.1);
-}
-
-.product-block:link {
-  text-decoration: none;
-}
-
-.product-image {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.page-body {
-  margin: 100px 0;
-}

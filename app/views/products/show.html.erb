@@ -1,48 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="product-display">
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+	<p id="notice"><%= notice %></p>
+	<%= image_tag @product.image_url, width: '400px', class: 'product-image'  %>
+	
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+		<h2>
+			<%= @product.title %>
+		</h2>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+		<p class="product-description">
+			<%= @product.description %>
+		</p>
 
-<p>
-  <strong>Currency:</strong>
-  <%= @product.currency %>
-</p>
+		<p>
+			<%= @product.cost %><%= @product.currency %>
+		</p>
 
-<p>
-  <strong>Cost:</strong>
-  <%= @product.cost %>
-</p>
+		<%= link_to 'Write Review', new_product_review_path(@product) %> | 
 
-<p>
-  <strong>Items per order:</strong>
-  <%= @product.items_per_order %>
-</p>
+		<%= link_to 'Edit', edit_product_path(@product) %> |
+		<%= link_to 'Back', products_path %>
 
-<%= link_to 'Write Review', new_product_review_path(@product) %> | 
+		<h2 style="margin-top: 50px;">All reviews</h2>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
-
-<h2>All reviews</h2>
-
-<% @product.reviews.each do |review| %>
-  <div>
-    <h4><%= review.title %></h4>
-    <p>
-      <%= review.body %>
-    </p>
-    <h5>Rating: <%= review.rating %></h5>
-  </div>
-<% end %>
+		<% @product.reviews.each do |review| %>
+			<div class="product-review">
+				<h4><%= review.title %></h4>
+				<p>
+					<%= review.body %>
+				</p>
+				<h5>Rating: <%= review.rating %></h5>
+			</div>
+		<% end %>
+</div>
